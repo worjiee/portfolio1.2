@@ -75,13 +75,35 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 @media (min-width: 768px) {
-  body:has(.portfolio-scroll) { overflow: hidden; }
-  .portfolio-scroll { scrollbar-gutter: stable; }
+  html { scrollbar-gutter: stable; }
+}
+
+@media (min-width: 768px) and (max-height: 980px) {
+  .profile-image { width: 130px; height: 130px; margin-bottom: .75rem; }
+  .profile-content > p:first-of-type { margin-bottom: .5rem; }
+  .profile-name { margin-bottom: .75rem; font-size: 2.5rem; }
+  .profile-bio { margin-bottom: .75rem; font-size: .875rem; line-height: 1.45; }
+  .profile-content > ul li { padding-block: .375rem; }
+  .profile-nav { margin-block: .65rem; padding-block: .7rem; column-gap: 1rem; row-gap: .5rem; font-size: .62rem; }
+  .profile-content > div:last-child { gap: .5rem; }
+  .profile-content > div:last-child > a:last-child { padding: .7rem .9rem; }
+  .sidebar-certification { margin-top: .75rem; padding-block: .75rem; }
+  .sidebar-certification-label { margin-bottom: .25rem; }
+  .sidebar-certification-badge { width: 80px; }
+  .sidebar-certification-details { margin-top: .4rem; }
+  .sidebar-certification-details + a { margin-top: .4rem; }
 }
 
 @media (min-width: 768px) and (max-height: 760px) {
-  .profile-image { width: 130px; height: 130px; margin-bottom: 1.5rem; }
-  .profile-bio { line-height: 1.6; margin-bottom: 1rem; }
-  .profile-name { margin-bottom: 1rem; }
-  .profile-nav { margin-block: 1rem; padding-block: .9rem; }
+  .profile-image { width: 110px; height: 110px; margin-bottom: .5rem; }
+  .profile-name { margin-bottom: .5rem; font-size: 2.25rem; }
+  .profile-bio { margin-bottom: .4rem; font-size: .74rem; line-height: 1.25; }
+  .profile-content > ul { gap: .3rem; }
+  .profile-content > ul li { padding: .3rem .45rem; font-size: .58rem; }
+  .sidebar-certification { margin-top: .4rem; padding-block: .35rem; }
+  .sidebar-certification-label { margin-bottom: .2rem; }
+  .sidebar-certification-badge { width: 64px; }
+  .profile-nav { margin-block: .25rem; padding-block: .4rem; }
+  .profile-content > div:last-child > div a { width: 2rem; height: 2rem; }
+  .profile-content > div:last-child > a:last-child { padding: .5rem .7rem; }
 }

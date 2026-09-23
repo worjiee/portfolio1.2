@@ -1,4 +1,5 @@
 import { ContactForm } from "@/components/contact/ContactForm";
+import { CertificationsSection } from "@/components/certifications/CertificationsSection";
 import { Footer } from "@/components/layout/Footer";
 import { ProfileSidebar } from "@/components/layout/ProfileSidebar";
 import { ProjectGrid } from "@/components/projects/ProjectGrid";
@@ -10,7 +11,7 @@ export default function Home() {
   return <main className="min-h-screen">
     <a href="#work" className="fixed top-3 left-3 z-50 -translate-y-[160%] rounded-lg bg-[var(--button)] px-4 py-2.5 text-[var(--button-foreground)] focus:translate-y-0">Skip to selected work</a>
     <ProfileSidebar />
-    <section className="portfolio-scroll w-full px-[18px] py-16 md:ml-[36%] md:h-svh md:w-[64%] md:overflow-y-auto md:px-[5vw] md:py-[8vw] lg:ml-[34%] lg:w-[66%] lg:px-[6vw]">
+    <section className="portfolio-scroll w-full px-[18px] py-16 md:ml-[36%] md:w-[64%] md:px-[5vw] md:py-[8vw] lg:ml-[34%] lg:w-[66%] lg:px-[6vw]">
       <section id="work">
         <MotionReveal className="mb-12 flex items-end justify-between">
           <div><SectionLabel>SELECTED WORK</SectionLabel><h2 className="font-[family-name:var(--font-mono)] text-[clamp(2rem,3vw,3.25rem)] font-medium leading-[1.08] tracking-[-.055em]">Featured Projects</h2></div>
@@ -18,6 +19,8 @@ export default function Home() {
         </MotionReveal>
         <ProjectGrid projects={projects} />
       </section>
+
+      <CertificationsSection />
 
       <section id="about"><MotionReveal className="my-24 grid grid-cols-1 gap-8 border-y border-[var(--border)] py-16 lg:grid-cols-[.55fr_1.4fr_.7fr]">
           <SectionLabel>CURRENT FOCUS</SectionLabel>
